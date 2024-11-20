@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(41, 41, 41);
+  color: aliceblue;
+}
+
+body > * {
+  padding: 0.3rem;
+}
+
+/* header */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* main game */
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#next-button {
+  width: 10%;
+  height: 40px;
+  cursor: pointer;
+}
+
+#dialogue-container {
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #3b3b3b;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+#dialogue-container p {
+  margin: 10px 0;
+}
+
+/* footer */
+
+
+
