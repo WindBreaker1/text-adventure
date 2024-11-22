@@ -1,20 +1,15 @@
-function dialogueBox(text) {
-  const newElement = document.createElement('p')
-  newElement.textContent = text;
-}
-
 // HTML DOM elements
 
-const valueNumber = document.querySelector('#value')
-const basicInput = document.querySelector('#input')
+// id elements
 const nextButton = document.querySelector('#next-button')
 const dialogueContainer = document.querySelector('#dialogue-container')
 const progressBar = document.querySelector('.progress-bar')
 const coinsText = document.querySelector('#coins-text')
 
+// class elements
 const startButton = document.querySelector('.start-button')
 
-// game shit
+// idle game logic
 let coins = 0;
 
 function startProgress() {
@@ -39,10 +34,7 @@ function startProgress() {
 
 document.querySelector('.start-button').addEventListener('click', startProgress);
 
-
-
-
-// text shit
+// text-box & story logic
 
 let currentIndex = 0;
 
