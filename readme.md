@@ -4,13 +4,27 @@ This is a project that is meant to help me re-learn js.
 
 This game will be similar to [A Dark Room](https://adarkroom.doublespeakgames.com/).
 
-## How does the system work?
+## Premise
 
-This is a game about a regular guy in a fantasy world trying to make $$$.
+An idle game about a blob trying to find out the meaning of life.
 
-He starts by begging on the street, they then improve their job and make more coins.
+## The Game
 
-After each dialogue, the player will be given two or more choices that they can make. Each choice will devolve into another branch of the story.
+Progress:
+
+- Blob awakens, starts absorbing an element called life.
+- After absorbing 100 life, Blob finds a caveman named Rock. Rock can gather food.
+- 
+
+## The Characters
+
+- Rock the Caveman
+- Bruce the Banker
+- Elsa the Witch
+
+## The Goal
+
+The player is trying to get to 1 trillion life, in order to find the meaning of life.
 
 ## Resources
 
