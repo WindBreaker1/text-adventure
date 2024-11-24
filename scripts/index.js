@@ -11,6 +11,7 @@ const startButton = document.querySelector('.start-button')
 
 // idle game logic
 let life = 0;
+let progressInterval = 10;
 
 function startProgress() {
   startButton.disabled = false;
@@ -29,21 +30,33 @@ function startProgress() {
       width++
       progressBar.style.width = width + '%'
     }
-  }, 10)
+  }, progressInterval)
 }
 
 document.querySelector('.start-button').addEventListener('click', startProgress);
 
+// upgrades
+
+const upgradeOneButton = document.querySelector("#upgrade-one");
+
+let upgradeOne = {
+  cost: 3
+}
+
+function buyUpgradeOne() {
+  if (life >= upgradeOne.cost) {
+    life -= upgradeOne.cost
+    lifeText.innerText = `Life: ${life}`
+    progressInterval = 5;
+    upgradeOneButton.disabled = true;
+  }
+}
+
+upgradeOneButton.addEventListener('click', buyUpgradeOne);
+
 // text-box & story logic
 
 let currentIndex = 0;
-
-const dialogues = [
-  '"Welcome, traveler! Are you here for the quest?"',
-  '"The road ahead is perilous. Many have tried, but few succeeded."',
-  '"Take this sword. It will guide you on your journey."',
-  '"Good luck, brave soul!"'
-]
 
 const complexDialogue = [
   {index: 1, cost: 5, text: `Hello...`},

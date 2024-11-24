@@ -20,7 +20,22 @@ body > * {
   justify-content: space-between;
 }
 
-/* idle game */
+/* upgrades */
+
+#upgrades-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 0.1fr));
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.upgrade-box {
+  width: 6rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+/* idle area */
 
 #game-container {
   display: flex;
