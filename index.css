@@ -4,13 +4,21 @@
 }
 
 body {
-  background-color: rgb(41, 41, 41);
+  background-color: #292929;
   color: aliceblue;
   font-family: Arial, sans-serif;
 }
 
 body > * {
   padding: 0.3rem;
+}
+
+a {
+  color: #6e6e6e;
+}
+
+a:hover {
+  color: #328a1d;
 }
 
 /* header */
@@ -24,9 +32,13 @@ body > * {
 
 #upgrades-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 0.1fr));
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
   border: 1px solid #ccc;
   padding: 10px;
+  margin: 10px;
 }
 
 .upgrade-box {
@@ -81,13 +93,15 @@ body > * {
 }
 
 #next-button {
-  width: 10%;
+  width: 10rem;
   height: 40px;
   cursor: pointer;
 }
 
 #dialogue-container {
-  width: 50%;
+  width: 70%;
+  max-height: 200px;
+  overflow: auto;
   margin: 20px auto;
   padding: 10px;
   border: 2px solid #ccc;
