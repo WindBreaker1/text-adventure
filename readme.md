@@ -14,13 +14,17 @@ Progress:
 
 - Blob awakens, starts absorbing an element called life.
 - After absorbing 100 life, Blob finds a caveman named Rock. Rock can gather food.
-- 
+- Food can attract other humans, which absorb life faster.
+- At 1,000 life, Blob finds Thorin, a viking girl who cuts wood.
+- With wood, houses can be built, which will attract more humans, which will absorb life faster.
 
 ## 🏋️The Characters
 
-- Rock the Caveman
-- Bruce the Banker
-- Elsa the Witch
+- Rock the Rowdy Caveman
+- Thorin the Viking Girl
+- Cairo the Egyptian Princess
+- Bruce the Greedy Banker
+- Elsa the Wicked Witch
 
 ## ⬆️The Upgrades
 
