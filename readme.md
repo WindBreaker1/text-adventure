@@ -41,6 +41,14 @@ The player is trying to get to 1 trillion life, in order to find the meaning of 
 
 - 0.1: The basics.
 
+## 📃TODO
+
+### 0.1 TODOs
+
+- [ ] 50 upgrades
+- [ ] 5 characters
+- [ ] 100 dialogues
+
 ## 🐞The Bugs
 
 There are no bugs yet! 😇
