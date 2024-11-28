@@ -48,6 +48,7 @@ The player is trying to get to 1 trillion life, in order to find the meaning of 
 - [ ] 50 upgrades
 - [ ] 5 characters
 - [ ] 100 dialogues
+- [ ] Add a world map where the player can move with the mouse using HTML canvas.
 
 ## 🐞The Bugs
 
