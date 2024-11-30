@@ -115,3 +115,83 @@ function showNextDialogue() {
 }
 
 nextButton.addEventListener('click', showNextDialogue)
+
+
+
+// canvas shenanigans
+
+const canvas = document.querySelector('#gridCanvas');
+const ctx = canvas.getContext('2d');
+
+const rows = 10;
+const cols = 10;
+const cellSize = 50; //pixels
+
+function drawGrid() {
+  ctx.strokeStyle = '#cccccc';
+  for (let x = 0; x <= cols; x++) {
+    ctx.beginPath();
+    ctx.moveTo(x * cellSize, 0);
+    ctx.lineTo(x * cellSize, canvas.height);
+    ctx.stroke();
+  }
+
+  for (let y = 0; y <= rows; y++) {
+    ctx.beginPath();
+    ctx.moveTo(0, y * cellSize);
+    ctx.lineTo(canvas.width, y * cellSize);
+    ctx.stroke();
+  }
+}
+
+drawGrid();
+
+function drawEmoji(emoji, x, y) {
+  ctx.font = `${cellSize * 0.8}px Arial`; // Font size relative to cell size
+  ctx.textAlign = 'center'; // Center text horizontally
+  ctx.textBaseline = 'middle'; // Center text vertically
+  ctx.fillText(emoji, x * cellSize + cellSize / 2, y * cellSize + cellSize / 2);
+}
+
+
+// Initial player position
+let playerX = 0; // Player starts in column 0
+let playerY = 0; // Player starts in row 0
+
+function drawPlayer(x, y) {
+  ctx.font = `${cellSize * 0.8}px Arial`; // Adjust font size relative to cell size
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('🧍', x * cellSize + cellSize / 2, y * cellSize + cellSize / 2);
+}
+
+// Update the canvas
+function updateCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+  drawGrid(); // Redraw the grid
+  drawPlayer(playerX, playerY); // Draw the player at the current position
+}
+
+
+// Handle keyboard input
+function handleKeyDown(event) {
+  if (event.key === 'ArrowUp' && playerY > 0) {
+    playerY--; // Move up
+  } else if (event.key === 'ArrowDown' && playerY < rows - 1) {
+    playerY++; // Move down
+  } else if (event.key === 'ArrowLeft' && playerX > 0) {
+    playerX--; // Move left
+  } else if (event.key === 'ArrowRight' && playerX < cols - 1) {
+    playerX++; // Move right
+  }
+  updateCanvas(); // Redraw the canvas with the updated position
+}
+
+// Initialize the game
+document.addEventListener('keydown', handleKeyDown);
+updateCanvas(); // Initial render
+
+drawEmoji('🌲', 2, 3);
+drawEmoji('🌲', 2, 4);
+drawEmoji('🌲', 2, 5);
+drawEmoji('⛰️', 5, 6);
