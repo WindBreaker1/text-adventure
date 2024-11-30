@@ -58,3 +58,10 @@ There are no bugs yet! 😇
 
 This [site](https://www.javascriptcheatsheet.org/) is a cool resource if you want a cheat sheet on JavaScript.
 
+---
+
+## Alternate Game Idea
+
+MC tries to save Eleanor, a person destined for death.
+
+Idle game with similar UI and gameplay with Pico Dating Sim 3.
