@@ -65,3 +65,5 @@ This [site](https://www.javascriptcheatsheet.org/) is a cool resource if you wan
 MC tries to save Eleanor, a person destined for death.
 
 Idle game with similar UI and gameplay with Pico Dating Sim 3.
+
+After Eleanor dies, the MC resets the universe, where the player can take some prestige upgrades to make the game go faster.
