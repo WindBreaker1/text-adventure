@@ -118,7 +118,9 @@ nextButton.addEventListener('click', showNextDialogue)
 
 
 
-// canvas shenanigans
+/**
+ * @description test
+ */
 
 const canvas = document.querySelector('#gridCanvas');
 const ctx = canvas.getContext('2d');
