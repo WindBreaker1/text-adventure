@@ -93,7 +93,7 @@ class Dialogue {
 
 const complexDialogue = [
   new Dialogue(0, 5, `The prototype!`),
-  {index: 1, cost: 5, text: `Hello...`},
+  {index: 1, cost: 5, text: `*Hello...*`},
   {index: 2, cost: 5, text: `Hello... world?`},
   {index: 3, cost: 5, text: `Nah, that's too on the nose.`},
   {index: 4, cost: 5, text: `Where am I?`},
@@ -197,3 +197,71 @@ drawEmoji('🌲', 2, 3);
 drawEmoji('🌲', 2, 4);
 drawEmoji('🌲', 2, 5);
 drawEmoji('⛰️', 5, 6);
+
+
+// # light novel testing
+
+
+
+
+
+// Story data structure
+const story = {
+  start: {
+    text: "You wake up in a mysterious forest. What will you do?",
+    choices: [
+      { text: "Explore the forest", next: "explore" },
+      { text: "Stay where you are", next: "stay" },
+    ],
+  },
+  explore: {
+    text: "You find a strange glowing orb. What will you do?",
+    choices: [
+      { text: "Touch the orb", next: "touch_orb" },
+      { text: "Walk away", next: "walk_away" },
+    ],
+  },
+  stay: {
+    text: "You sit down and wait. Hours pass, and nothing happens. The end.",
+    choices: [],
+  },
+  touch_orb: {
+    text: "The orb grants you magical powers. You become a hero. The end.",
+    choices: [],
+  },
+  walk_away: {
+    text: "You walk away and find a way out of the forest. The end.",
+    choices: [],
+  },
+};
+
+// State variables
+let currentScene = "start";
+
+// Function to render the current scene
+function renderScene() {
+  const scene = story[currentScene];
+  const textDiv = document.getElementById("text");
+  const choicesDiv = document.getElementById("choices");
+
+  // Display text
+  textDiv.textContent = scene.text;
+
+  // Clear previous choices
+  choicesDiv.innerHTML = "";
+
+  // Display choices
+  scene.choices.forEach((choice) => {
+    const button = document.createElement("button");
+    button.textContent = choice.text;
+    button.classList.add("choice");
+    button.addEventListener("click", () => {
+      currentScene = choice.next;
+      renderScene();
+    });
+    choicesDiv.appendChild(button);
+  });
+}
+
+// Start the game
+renderScene();
