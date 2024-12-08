@@ -218,7 +218,13 @@ const story = {
     text: "You find a strange glowing orb. What will you do?",
     choices: [
       { text: "Touch the orb", next: "touch_orb" },
-      { text: "Walk away", next: "walk_away" },
+      { text: "Walk away", next: "test" },
+    ],
+  },
+  test: {
+    text: "This is a test!",
+    choices: [
+      { text: "Fuck", next: "" },
     ],
   },
   stay: {
